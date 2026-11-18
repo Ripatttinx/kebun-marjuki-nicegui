@@ -1,0 +1,18 @@
+AUDIT MIGRASI PYTHON NICEGUI
+
+accounting/models.py: IDENTIK SHA256=fb101e6cbc5838edfa0666d7364160cd32453f7d2832c4ded6f659dc35e80217
+accounting/forms.py: IDENTIK SHA256=daa8dd71f749d53eabd4cd97cedd8e316f7af6e623aa1c1768094a32492290e1
+accounting/services.py: IDENTIK SHA256=333226a4a898575ef5c911b381dcf958ca243bd37c22514f985a6e9894edb164
+accounting/journal_rules.py: IDENTIK SHA256=f644f5bbe3d80c5e1eae8795a5514e57c5f3f641f42cc659d952428bae63b1ee
+accounting/exports.py: IDENTIK SHA256=1069e5890191ed7e60c26d8229977400aee64dc8c0b95813e9ace88a4e9ba351
+accounting/vouchers.py: IDENTIK SHA256=5faa9b1397d364e4e9eb6c69038a76fe72454f3ce7c70597f5e6fbfe60b3d39d
+db.sqlite3: IDENTIK SHA256=992d0bdc29da5f194ba645c2e18fabc14276bfd6bc02e84ace81e06035f924d2
+
+27 halaman NiceGUI; 0 file .html/.css/.js.
+Pemeriksaan runtime web tidak tersedia saat pembuatan; instal paket dan jalankan di komputer sendiri.
+accounting_account: 27 baris awal
+accounting_journalentry: 1 baris awal
+accounting_journalline: 2 baris awal
+accounting_product: 5 baris awal
+accounting_inventorymovement: 5 baris awal
+accounting_party: 9 baris awal
