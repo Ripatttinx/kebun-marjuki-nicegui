@@ -44,6 +44,25 @@ from accounting.models import (
     Account, BusinessProfile, Party, Product, JournalEntry, JournalLine,
     InventoryLayer, InventoryMovement, ZERO,
 )
+
+def _auto_init():
+    try:
+        from django.core.management import call_command
+        call_command('migrate', interactive=False)
+        _User = get_user_model()
+        if not _User.objects.filter(username='admin').exists():
+            _User.objects.create_superuser('admin', 'admin@example.com', 'admin123')
+            print("Auto-created admin user: admin / admin123")
+        if not Account.objects.exists():
+            try:
+                call_command('seed_agriculture', demo=True)
+                print("Auto-seeded demo agriculture data")
+            except Exception:
+                pass
+    except Exception as _e:
+        print(f"Auto-init: {_e}")
+
+_auto_init()
 from accounting.services import (
     ledger, subsidiary, worksheet, report_balances, period_totals, stock_card,
     create_opening_stock, create_stock_movement, delete_journal_entry, money,
